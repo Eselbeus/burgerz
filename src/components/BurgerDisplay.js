@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const BurgerDisplay = (props) => {
-  console.log(props)
+
   return (
     <div className="BurgerDisplay">
       <img src={props.showBurger.imgURL}/>

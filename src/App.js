@@ -103,9 +103,11 @@ class App extends Component {
           return burger
         }
         else {
-          return {...burger, category: (json.category)}
+          return {...burger, category: json.category}
         }
       })
+      // console.log(json.category)
+      // console.log(this.state.showBurger)
       this.setState({
         burgers: updatedBurgers,
         relatable: updatedBurgers.filter(burger => {
@@ -113,7 +115,8 @@ class App extends Component {
         }),
         bougie: updatedBurgers.filter(burger => {
           return burger.category === "Bougie"
-        })
+        }),
+        showBurger: {...json}
       })
     })
   }
