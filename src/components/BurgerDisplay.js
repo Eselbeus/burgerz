@@ -8,7 +8,7 @@ const BurgerDisplay = (props) => {
       <br/>
       <h1>{props.showBurger.name}</h1>
       <br/>
-      <select onChange={() => props.changeCategory(props.showBurger.id)}>
+      <select onChange={() => props.changeCategory(props.showBurger.id)} value={props.showBurger.category}>
         {props.showBurger.category === "Relatable" ? <option value="Relatable">Relatable</option> : <option value="Bougie">Bougie</option>}
         {props.showBurger.category === "Relatable" ? <option value="Bougie">Bougie</option> : <option value="Relatable">Relatable</option>}
       </select>
